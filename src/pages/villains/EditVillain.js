@@ -20,21 +20,21 @@ class EditVillain extends Component {
   }
 
   handleInputChange = ({ currentTarget: input }) => {
-    const updatedVillain = { ...this.state.villain };
-    const { name, value } = input;
-    updatedVillain[name] = value;
-    this.setState({
-      villain: updatedVillain
-    });
-
-    // OR
+    // const updatedVillain = { ...this.state.villain };
     // const { name, value } = input;
+    // updatedVillain[name] = value;
     // this.setState({
-    //   villain: {
-    //     ...this.state.villain,
-    //     [name]: value
-    //   }
+    //   villain: updatedVillain
     // });
+    // OR
+    
+    const { name, value } = input;
+    this.setState({
+      villain: {
+        ...this.state.villain,
+        [name]: value
+      }
+    });
   };
 
   handleSubmit = event => {

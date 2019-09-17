@@ -21,12 +21,12 @@ class EditHero extends Component {
   }
 
   handleInputChange = ({ currentTarget: input }) => {
-    // const updatedHero = { ...this.state.hero };
-    // const { name, value } = input;
-    // updatedHero[name] = value;
-    // this.setState({
-    //   hero: updatedHero
-    // });
+    const updatedHero = { ...this.state.hero };
+    const { name, value } = input;
+    updatedHero[name] = value;
+    this.setState({
+      hero: updatedHero
+    });
     // OR
     // const { name, value } = input;
     // this.setState({
